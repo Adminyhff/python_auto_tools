@@ -42,6 +42,7 @@ If a tool grows beyond that, it gets its own repository.
 ---
 
 ## 3. Repository Layout
+```text
 python_auto_tools/
 ├── .gitignore
 ├── README.md
@@ -55,6 +56,7 @@ python_auto_tools/
 │ └── test_smoke.py
 └── docs/
 └── notes.md
+```
 
 
 - `src/` — all runnable scripts live here
@@ -81,8 +83,9 @@ Verification: your prompt must show (.venv) before you run
 anything. If it doesn't, you are in the wrong environment — stop and fix it.
 
 ## 5. Running a Tool
-bash
+```bash
 python src/test_requests.py
+```
 Each script should be runnable directly from the repo root. No
 package install step, no PYTHONPATH tricks.
 
