@@ -34,8 +34,9 @@ This repo is intentionally **small and finite**. The scope is:
 | 2 | `file_organizer.py` | Sort files in a directory into subfolders by extension or date. Dry-run by default.  
 | 3 | `log_parser.py` | Parse a log file, extract lines matching a pattern, output a summary count. 
 | 4 | `port_scanner.py` | Simple TCP connect scan against a host/port list (educational only, local targets). 
+| 5 | `os_tests.py` | What you use after you get a shell to figure out where you are, who you are, and how to escape.
 
-**How much?** Four tools total for v1.0. No more. Resist scope creep.
+**How much?** Five tools total for v1.0. No more. Resist scope creep.
 Each tool should be **under ~150 lines** and readable in one sitting.
 If a tool grows beyond that, it gets its own repository.
 
@@ -52,6 +53,7 @@ python_auto_tools/
 │ ├── file_organizer.py
 │ ├── log_parser.py
 │ └── port_scanner.py
+| └──os_tests.py  
 ├── tests/
 │ └── test_smoke.py
 └── docs/
@@ -134,13 +136,15 @@ A tool is not "done" until all of the following are true:
 ## 9. Roadmap
 v0.1 — test_requests.py working and pushed
 
-v0.2 — file_organizer.py with dry-run mode
+v0.2 — file_automation.py 
 
 v0.3 — log_parser.py
 
 v0.4 — port_scanner.py (local targets only)
 
-v1.0 — all four tools done, tests passing, README final
+v0.5 _ os_tests.py
+
+v1.0 — all five tools done, tests passing, README final
 
 Anything after v1.0 is a new project, not a new folder in this repo.
 

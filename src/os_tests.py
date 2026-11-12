@@ -2,6 +2,7 @@ import os
 import platform
 import getpass
 
+
 def system_recon():
     print("[*] Starting System Reconnaissance...")
     print("-" * 40)
@@ -24,14 +25,19 @@ def system_recon():
     # Sometimes environment variables can leak sensitive information like API keys or passwords
     print("\n[*] Scanning Environment Vriables...")
     for key, value in os.environ.items():
-        if "secret" in key.lower() or "password" in key.lower() or "api" in key.lower()or "pass" in key.lower():
+        if (
+            "secret" in key.lower()
+            or "password" in key.lower()
+            or "api" in key.lower()
+            or "pass" in key.lower()
+        ):
             print(f"[!] Potential Sensitive Data -> {key}: {value}")
 
     # 4. System Command Excution （The ultimate power)
     # Running native Linux commands directly from Python.
     print("\n[*] Executing shell commands...")
 
-    #Let's check the current working directory and network info
+    # Let's check the current working directory and network info
     current_dir = os.popen("pwd").read().strip()
     print(f"[+] Current Dircotory: {current_dir}")
 
@@ -44,9 +50,7 @@ def system_recon():
 
     print("-" * 40)
     print("[*] Recon Complete.")
+
+
 if __name__ == "__main__":
-     system_recon()
-
-
-        
-
+    system_recon()
